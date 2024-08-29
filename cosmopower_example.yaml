@@ -1,20 +1,21 @@
 cosmopower_cobaya.CosmoPower:
   stop_at_error: true
-  network_path: "/path/to/cosmopower/networks/"
+  network_path: "path_to_cosmopower_cobaya_directory/cosmopower_cobaya/data/CP_paper/"
+  python_path: "path_to_cosmopower_cobaya_directory/"
   network_settings:
     tt:
       type: NN
-      filename: "TT_cp_NN_Oct22_bao_pks_nozpk"
+      filename: "cmb_TT_NN"
       log: true
       has_ell_factor: true
     te:
       type: PCAplusNN
-      filename: "TE_cp_PCAplusNN_Oct22_bao_pks_nozpk"
+      filename: "cmb_TE_PCAplusNN"
       log: false
       has_ell_factor: true
     ee:
       type: NN
-      filename: "EE_cp_NN_Oct22_bao_pks_nozpk"
+      filename: "cmb_EE_NN"
       log: true
       has_ell_factor: true
   renames:
@@ -26,10 +27,11 @@ cosmopower_cobaya.CosmoPower:
 
 cosmopower_cobaya.CosmoPowerDerived:
   stop_at_error: true
-  network_path: "/path/to/cosmopower/networks/"
+  network_path: "path_to_cosmopower_cobaya_directory/cosmopower_cobaya/data/CP_paper/"
+  python_path: "path_to_cosmopower_cobaya_directory/"
   network_settings:
     type: NN
-    filename: DER_cp_NN_Oct22_bao_pks_nozpk
+    filename: "filename_derived_network"
     log: true
   derived_parameters:
     - thetas100
